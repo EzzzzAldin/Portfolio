@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap");
+
+:root {
+  --main-color: #382979;
+  --secondary-color: #fff;
+  --main-fontSize: 75px;
+  --second-fontSize: 24px;
+  --main-font: "DynaPuff", serif;
+  --secondary-font: "Sniglet", serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-family: var(--main-font);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url("./images/sl_072622_51930_13\ [Converted].png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.nav-link {
+  color: var(--secondary-color);
+  font-size: 26px;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+}
+
+.item1 {
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  animation: bounce 2s infinite;
+}
+
+.item2,
+.item3 {
+  position: absolute;
+  left: 0%;
+  bottom: -5%;
+  max-width: 150px;
+  z-index: -2;
+  animation: bounce 2s infinite;
+}
+
+section h2 {
+  font-size: var(--main-fontSize);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+/* Start Section About Me */
+
+#about p {
+  font-size: var(--second-fontSize);
+  font-weight: lighter;
+  text-align: justify;
+}
+
+@media (max-width: 767px) {
+  #about .item2 {
+    display: none;
+  }
+}
+
+/* End Section About Me */
+
+/* Start Section Education */
+#education .info h3 {
+  font-size: 28px;
+}
+
+#education .info h4,
+#education .info h5 {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+}
+
+#education .info h5 {
+  font-size: 17px;
+}
+
+#education .item1,
+#skills .item1 {
+  right: 25%;
+}
+
+#education .item2,
+#skills .item2,
+#projects .item2,
+#projects .item3,
+#experience .item2 {
+  left: 70%;
+  bottom: 10%;
+}
+
+@media (max-width: 991.98px) {
+  #education .item1,
+  .item2,
+  .item3 {
+    display: none;
+  }
+}
+
+/* End Section Education */
+
+/* Start Section Skills */
+.card,
+#experience img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover,
+#experience img:hover {
+  transform: scale(1.1);
+}
+/* End Section Skills */
+
+/* Start Section Projects */
+.card-text {
+  color: var(--main-color);
+  font-family: var(--secondary-font);
+}
+
+#projects .item1 {
+  max-width: 150px;
+}
+
+#projects .item2 {
+  bottom: 15%;
+}
+
+#projects .item3 {
+  bottom: 15%;
+  left: 55%;
+}
+
+/* End Section experience */
+
+/* Start Section experience */
+#experience .info h3 {
+  font-size: 40px;
+}
+
+#experience .info h4 {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+}
+
+#experience img {
+  margin-right: 4rem;
+}
+
+#experience .item1 {
+  top: 45%;
+  z-index: -2;
+}
+
+#experience .item2 {
+  bottom: -15%;
+  left: 55%;
+}
+
+#experience .item3 {
+  bottom: -15%;
+  left: 45%;
+}
+/* End Section Projects */
+
+/* Start Section Contact */
+#contact h2 {
+  font-size: 10rem;
+  text-align: center;
+  animation: bounce 2s infinite;
+}
+
+#contact .info {
+  width: 100%;
+  margin-top: 6rem !important;
+}
+
+#contact .info .my-info {
+  text-align: center;
+}
+
+#contact .item1 {
+  right: 10%;
+  top: 10%;
+}
+
+#contact .item2 {
+  bottom: 60%;
+  left: 10%;
+}
+
+#contact .item3 {
+  bottom: 25%;
+  left: 50%;
+}
+/* End Section Projects */
+.fade-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+/* عند التفاعل */
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
